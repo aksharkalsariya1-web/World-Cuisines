@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - World Cuisines</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function validateForm() {
+      let name = document.forms["contactForm"]["name"].value;
+      let email = document.forms["contactForm"]["email"].value;
+      if (name == "" || email == "") {
+        alert("Name and Email must be filled out");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1> World Cuisines</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="countries.html">Countries</a></li>
+        <li><a href="details.html">Famous Dishes</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <h2>Contact Us</h2>
+    <form name="contactForm" onsubmit="return validateForm()" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name">
+      <input type="email" name="email" placeholder="Your Email">
+      <textarea name="message" placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+  <footer><p>© 2025 World Cuisines | All Rights Reserved</p></footer>
+</body>
+</html>
